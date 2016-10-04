@@ -62,6 +62,10 @@
     <Compile Include="sokning.Designer.cs">
       <DependentUpon>sokning.cs</DependentUpon>
     </Compile>
+    <Compile Include="theme.cs" />
+    <Compile Include="theme2.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="uppdaterainfoForm.cs">
       <SubType>Form</SubType>
     </Compile>

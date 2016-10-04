@@ -82,5 +82,10 @@ namespace Adressbok
         {
             
         }
+
+        private void bullionButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

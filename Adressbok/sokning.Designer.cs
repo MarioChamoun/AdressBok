@@ -35,11 +35,13 @@
             this.lblNamn = new System.Windows.Forms.Label();
             this.btnRaderaInfo = new System.Windows.Forms.Button();
             this.btnUppdateraInfo = new System.Windows.Forms.Button();
+            this.bullionButton1 = new BullionButton();
+            this.Sökning = new BullionTheme();
             this.SuspendLayout();
             // 
             // txtNamn
             // 
-            this.txtNamn.Location = new System.Drawing.Point(12, 25);
+            this.txtNamn.Location = new System.Drawing.Point(12, 58);
             this.txtNamn.Name = "txtNamn";
             this.txtNamn.Size = new System.Drawing.Size(243, 20);
             this.txtNamn.TabIndex = 2;
@@ -49,14 +51,15 @@
             this.lstbResultat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstbResultat.FormattingEnabled = true;
-            this.lstbResultat.Location = new System.Drawing.Point(12, 51);
+            this.lstbResultat.Location = new System.Drawing.Point(12, 84);
             this.lstbResultat.Name = "lstbResultat";
-            this.lstbResultat.Size = new System.Drawing.Size(324, 160);
+            this.lstbResultat.Size = new System.Drawing.Size(325, 160);
             this.lstbResultat.TabIndex = 3;
             // 
             // btnInfo
             // 
-            this.btnInfo.Location = new System.Drawing.Point(214, 217);
+            this.btnInfo.ForeColor = System.Drawing.Color.Black;
+            this.btnInfo.Location = new System.Drawing.Point(214, 250);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(122, 23);
             this.btnInfo.TabIndex = 4;
@@ -66,7 +69,8 @@
             // 
             // btnSök
             // 
-            this.btnSök.Location = new System.Drawing.Point(261, 23);
+            this.btnSök.ForeColor = System.Drawing.Color.Black;
+            this.btnSök.Location = new System.Drawing.Point(261, 56);
             this.btnSök.Name = "btnSök";
             this.btnSök.Size = new System.Drawing.Size(75, 23);
             this.btnSök.TabIndex = 0;
@@ -77,7 +81,8 @@
             // lblNamn
             // 
             this.lblNamn.AutoSize = true;
-            this.lblNamn.Location = new System.Drawing.Point(12, 9);
+            this.lblNamn.ForeColor = System.Drawing.Color.Black;
+            this.lblNamn.Location = new System.Drawing.Point(12, 42);
             this.lblNamn.Name = "lblNamn";
             this.lblNamn.Size = new System.Drawing.Size(91, 13);
             this.lblNamn.TabIndex = 1;
@@ -85,7 +90,8 @@
             // 
             // btnRaderaInfo
             // 
-            this.btnRaderaInfo.Location = new System.Drawing.Point(12, 217);
+            this.btnRaderaInfo.ForeColor = System.Drawing.Color.Black;
+            this.btnRaderaInfo.Location = new System.Drawing.Point(12, 250);
             this.btnRaderaInfo.Name = "btnRaderaInfo";
             this.btnRaderaInfo.Size = new System.Drawing.Size(74, 23);
             this.btnRaderaInfo.TabIndex = 5;
@@ -95,7 +101,8 @@
             // 
             // btnUppdateraInfo
             // 
-            this.btnUppdateraInfo.Location = new System.Drawing.Point(118, 217);
+            this.btnUppdateraInfo.ForeColor = System.Drawing.Color.Black;
+            this.btnUppdateraInfo.Location = new System.Drawing.Point(118, 250);
             this.btnUppdateraInfo.Name = "btnUppdateraInfo";
             this.btnUppdateraInfo.Size = new System.Drawing.Size(90, 23);
             this.btnUppdateraInfo.TabIndex = 6;
@@ -103,11 +110,35 @@
             this.btnUppdateraInfo.UseVisualStyleBackColor = true;
             this.btnUppdateraInfo.Click += new System.EventHandler(this.btnUppdateraInfo_Click);
             // 
+            // bullionButton1
+            // 
+            this.bullionButton1.BackColor = System.Drawing.Color.Black;
+            this.bullionButton1.Font = new System.Drawing.Font("Verdana", 8F);
+            this.bullionButton1.ForeColor = System.Drawing.Color.Black;
+            this.bullionButton1.Image = null;
+            this.bullionButton1.Location = new System.Drawing.Point(302, 0);
+            this.bullionButton1.Name = "bullionButton1";
+            this.bullionButton1.Size = new System.Drawing.Size(47, 21);
+            this.bullionButton1.TabIndex = 8;
+            this.bullionButton1.Text = "X";
+            this.bullionButton1.Click += new System.EventHandler(this.bullionButton1_Click);
+            // 
+            // Sökning
+            // 
+            this.Sökning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Sökning.Font = new System.Drawing.Font("Verdana", 7F);
+            this.Sökning.Location = new System.Drawing.Point(0, 0);
+            this.Sökning.Name = "Sökning";
+            this.Sökning.Size = new System.Drawing.Size(349, 283);
+            this.Sökning.TabIndex = 7;
+            this.Sökning.Text = "Sökning";
+            // 
             // sokning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 249);
+            this.ClientSize = new System.Drawing.Size(349, 283);
+            this.Controls.Add(this.bullionButton1);
             this.Controls.Add(this.btnUppdateraInfo);
             this.Controls.Add(this.btnRaderaInfo);
             this.Controls.Add(this.btnInfo);
@@ -115,6 +146,9 @@
             this.Controls.Add(this.txtNamn);
             this.Controls.Add(this.lblNamn);
             this.Controls.Add(this.btnSök);
+            this.Controls.Add(this.Sökning);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "sokning";
             this.Text = "sokning";
             this.Load += new System.EventHandler(this.sokning_Load);
@@ -131,5 +165,7 @@
         public System.Windows.Forms.ListBox lstbResultat;
         private System.Windows.Forms.Button btnUppdateraInfo;
         public System.Windows.Forms.TextBox txtNamn;
+        private BullionTheme Sökning;
+        private BullionButton bullionButton1;
     }
 }
